@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/carCardview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="@dimen/margin3"
+        android:layout_marginTop="@dimen/margin3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/CarimageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toTopOf="@+id/guidelineimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <TextView
+                android:id="@+id/cartitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin7"
+                android:hint="BMW"
+                android:textSize="@dimen/textlarge"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/CarimageView"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineimage"/>
+
+            <TextView
+                android:id="@+id/carotherdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin7"
+                android:hint="details "
+                app:layout_constraintStart_toStartOf="@id/cartitles"
+                app:layout_constraintTop_toBottomOf="@id/cartitles"/>
+
+            <TextView
+                android:id="@+id/carlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin7"
+                android:hint="$5000"
+                app:layout_constraintStart_toStartOf="@id/cartitles"
+                app:layout_constraintTop_toBottomOf="@id/carotherdetails"/>
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calldealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carlocation"
+                android:hint="CALL DeALER"
+                app:backgroundTint="@color/white"
+                android:background="@color/white"
+                android:textColor="@color/purple_700"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>

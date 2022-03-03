@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarDetails">
+
+ 
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelinemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carCardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                card_view:cardElevation="10dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/CarimageView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toTopOf="@+id/guidelineimage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.4" />
+
+                    <TextView
+                        android:id="@+id/cartitles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin7"
+                        android:text="Fiat"
+                        android:textSize="@dimen/textlarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/CarimageView"
+                        app:layout_constraintTop_toBottomOf="@+id/guidelineimage"/>
+
+                    <TextView
+                        android:id="@+id/carotherdetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin7"
+                        android:text="$ 147000"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textlargelarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/cartitles"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/greyLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:layout_marginEnd="@dimen/margin10"
+                        android:background="@color/grey"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@+id/carotherdetails"/>
+
+                    <TextView
+                        android:id="@+id/carinfotitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/carinfo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textlarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/greyLine"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineCarInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.6" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineCarInfoVertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/carinfolocationtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/location"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/guidelineCarInfo"/>
+
+                    <TextView
+                        android:id="@+id/carinfolocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/carinfo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/guidelineCarInfo"/>
+
+                    <TextView
+                        android:id="@+id/carinfoExteriortitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/exterior"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfolocationtitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoExterior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/exterior"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfolocationtitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoInteriortitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/interior"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoExteriortitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoInterior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/interior"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoExterior"/>
+
+                    <TextView
+                        android:id="@+id/carinfoDrivetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/drive"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoInteriortitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoDrive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/drive"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoInterior"/>
+
+                    <TextView
+                        android:id="@+id/carinfoTransmissiontitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/transmission"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoDrivetitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoTransmission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/transmission"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoDrive"/>
+
+                    <TextView
+                        android:id="@+id/carinfoBodytitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/body"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoTransmissiontitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/body"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoTransmission"/>
+
+                    <TextView
+                        android:id="@+id/carinfoEnginetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/engine"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoBodytitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoEngine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/engine"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoBody"/>
+
+                    <TextView
+                        android:id="@+id/carinfoFueltitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/fuel"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toStartOf="@id/cartitles"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoEnginetitle"/>
+
+                    <TextView
+                        android:id="@+id/carinfoFuel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="@string/fuel"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textstandard"
+                        app:layout_constraintStart_toEndOf="@id/guidelineCarInfoVertical"
+                        app:layout_constraintTop_toBottomOf="@id/carinfoEngine"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/callButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:background="@color/cornblue"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:text="@string/calldealer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textlarge"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

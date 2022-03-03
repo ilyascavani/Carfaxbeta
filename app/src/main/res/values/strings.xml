@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CarfaxAssignment</string>
+    <string name="calldealer"> CALL DEALER</string>
+    <string name="carinfo">Vehicle Info</string>
+    <string name="location">Location</string>
+    <string name="exterior">Exterior Color</string>
+    <string name="interior">Interior Color</string>
+    <string name="drive">Drive Type</string>
+    <string name="transmission">Transmission</string>
+    <string name="body">Body Style</string>
+    <string name="engine">Engine</string>
+    <string name="fuel">Fuel</string>
+
+</resources>
