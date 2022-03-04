@@ -14,9 +14,11 @@ class CarAdapter(var carslist : List<Car>) :RecyclerView.Adapter<CarViewHolder>(
         return CarViewHolder(binding)
     }
 
+
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
      holder.bind(carslist[position])
     }
+
 
     override fun getItemCount(): Int {
         return carslist.size

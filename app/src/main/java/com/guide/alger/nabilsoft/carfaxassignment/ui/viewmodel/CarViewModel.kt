@@ -15,7 +15,8 @@ fun getcars() {
 
 }
    fun fetchcars():MutableLiveData<CarResponse>{
-     return repositry.getcarresponse()
+     carlist= repositry.getcarresponse()
+       return carlist
    }
 
 }
